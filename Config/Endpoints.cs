@@ -8,5 +8,6 @@ public static class Endpoints
 	{
 		wba.MapGet("/", () => "Hello World!");
 		wba.MapPost("/NegativeGearing", new Calculation().NegativeGearing);
+		wba.MapGet("/TaxPayable", (string taxYear, int income) => new Calculation().TaxPayable(taxYear, income));
 	}
 }
